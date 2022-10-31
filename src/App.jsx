@@ -7,9 +7,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookModal from './components/BookModal/BookModal';
 
 function App() {
-    const [query, setQuery] = useState(['', 10, '']);
+    const [query, setQuery] = useState({ input: '', number: 10, index: '' });
     const onSearch = (input, number, index) => {
-        setQuery([input, number, index]);
+        setQuery({ input, number, index });
     };
 
     return (

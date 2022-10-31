@@ -8,15 +8,12 @@ const BookModal = () => {
     const { id } = useParams();
     const [book, setBook] = useState(null);
 
-    const getIndividualBook = async (id) => {
-        const results = await searchById(id);
-        return results;
-    };
-
-    useEffect(async () => {
-        const result = await getIndividualBook(id);
-        setBook(result);
-        console.log(result);
+    useEffect(() => {
+        const getIndividualBook = async (id) => {
+            const results = await searchById(id);
+            setBook(results);
+        };
+        getIndividualBook(id);
     }, []);
 
     return (

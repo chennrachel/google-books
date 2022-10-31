@@ -1,8 +1,8 @@
 // function searching for books using google API
 export const searchForBook = async (query) => {
-    const search = query[0].split(' ').join('+');
+    const search = query.input.split(' ').join('+');
     const response = await fetch(
-        `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=${query[1]}`
+        `https://www.googleapis.com/books/v1/volumes?q=${search}&maxResults=${query.number}`
     );
     const json = response.json();
     return json;

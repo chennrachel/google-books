@@ -7,14 +7,13 @@ const Books = ({ query }) => {
     const [books, setBooks] = useState([]);
 
     useEffect(() => {
+        const getResults = async (query) => {
+            const results = await searchForBook(query);
+            console.log(results);
+            setBooks(results.items);
+        };
         getResults(query);
     }, [query]);
-
-    const getResults = async (query) => {
-        const results = await searchForBook(query);
-        console.log(results);
-        setBooks(results.items);
-    };
 
     return (
         <section className={style.Section}>
