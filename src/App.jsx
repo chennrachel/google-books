@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 import SearchForm from './components/SearchForm/SearchForm';
 import Books from './containers/Books/Books';
 import { useState } from 'react';
-import { NavLink, BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookModal from './components/BookModal/BookModal';
 
 function App() {

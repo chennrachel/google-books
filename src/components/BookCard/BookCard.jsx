@@ -1,6 +1,5 @@
 import style from './BookCard.module.scss';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
-import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const BookCard = ({ books }) => {
     return (

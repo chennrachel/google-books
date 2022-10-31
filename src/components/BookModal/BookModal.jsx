@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Books from '../../containers/Books/Books';
 import { searchById } from '../../service/searchForBook';
 import style from './BookModal.module.scss';
 
