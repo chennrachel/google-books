@@ -3,21 +3,25 @@ import style from './SearchForm.module.scss';
 import { useNavigate } from 'react-router-dom';
 
 const SearchForm = ({ onSearch }) => {
+    // useState for search input
     const [search, setSearch] = useState('');
+    // useState for number of book results per search
     const [searchNumber, setSearchNumber] = useState(10);
-    // const [initialSearch, setInitialSearch] = useState(false);
     const navigate = useNavigate();
 
+    // function: change search input using the value in the input
     const onInputChange = (event) => {
         const value = event.target.value;
         setSearch(value);
     };
 
+    // function: change number of book results per search using the value in the dropdown
     const onSearchNumberChange = (event) => {
         const value = event.target.value;
         setSearchNumber(value);
     };
 
+    // function: on submit form, search and show the search results: books
     const onFormSubmit = (event) => {
         event.preventDefault();
         onSearch(search, searchNumber);

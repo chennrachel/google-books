@@ -7,8 +7,6 @@ import { NavLink, BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookModal from './components/BookModal/BookModal';
 
 function App() {
-    // TODO: array with keys and values
-    // index[0] search, index[1] number of results, index[2] author
     const [query, setQuery] = useState(['', 10, '']);
     const onSearch = (input, number, index) => {
         setQuery([input, number, index]);
