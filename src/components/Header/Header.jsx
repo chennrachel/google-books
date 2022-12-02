@@ -13,8 +13,8 @@ const Header = () => {
                 BOOK SEARCH
             </h1>
             <p className={style.Header__p}>
-                Using the Google Books API, look up information on your
-                favourite books!
+                Look up information on your favourite books using the Google
+                Books API!
             </p>
         </div>
     );
