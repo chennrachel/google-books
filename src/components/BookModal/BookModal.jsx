@@ -20,7 +20,6 @@ const BookModal = () => {
         <div className={style.Modal}>
             {book && (
                 <main>
-                    {book.volumeInfo.title && <h1>{book.volumeInfo.title}</h1>}
                     <div className={style.Card}>
                         <img
                             className={style.Img}
@@ -31,6 +30,11 @@ const BookModal = () => {
                             }
                         />
                         <div className={style.Text}>
+                            {book.volumeInfo.title && (
+                                <h1 className={style.Title}>
+                                    {book.volumeInfo.title}
+                                </h1>
+                            )}
                             {book.volumeInfo.authors && (
                                 <h3>
                                     By: {book.volumeInfo.authors.join(', ')}
@@ -46,7 +50,6 @@ const BookModal = () => {
                             )}
                             {book.volumeInfo.description && (
                                 <p>
-                                    Description:{' '}
                                     {book.volumeInfo.description.replace(
                                         /\s*\<.*?\>\s*/g,
                                         ''

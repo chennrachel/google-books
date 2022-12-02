@@ -3,14 +3,23 @@
 }
 
 .Img {
-    width: 200px;
+    width: 350px;
+    height: 400px;
     border-radius: 10px;
+    padding-top: 30px;
+    border-radius: 15%;
 }
 
 .Text {
-    margin-left: 10px;
+    margin-left: 50px;
 }
 
 .Modal {
     background-color: white;
+    padding: 20px 20vw;
+    margin-top: 270px;
+}
+
+.Title {
+    text-align: center;
 }

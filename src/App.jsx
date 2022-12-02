@@ -44,8 +44,10 @@ function App() {
                         path='/books/:id'
                         element={
                             <>
-                                <Header />
-                                <SearchForm onSearch={onSearch} />
+                                <div className={style.Background}>
+                                    <Header />
+                                    <SearchForm onSearch={onSearch} />
+                                </div>
                                 <BookModal />
                             </>
                         }
