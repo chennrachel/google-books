@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import style from './SearchForm.module.scss';
 import { useNavigate } from 'react-router-dom';
+import buttonStyle from '../Button/Button.module.scss';
 
 const SearchForm = ({ onSearch }) => {
     // useState for search input
@@ -38,6 +39,7 @@ const SearchForm = ({ onSearch }) => {
                         type='text'
                         value={search}
                         onChange={onInputChange}
+                        placeholder='search for a book'
                     ></input>
                 </div>
                 <div>
@@ -56,7 +58,7 @@ const SearchForm = ({ onSearch }) => {
                     </select>
 
                     <input
-                        className={style.Form__Submit}
+                        className={buttonStyle.Button}
                         type='submit'
                         value='Search'
                     />

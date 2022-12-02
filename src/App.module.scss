@@ -1,19 +1,29 @@
 .All {
-    font-family: monospace;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
 
 .Background {
     position: absolute;
-    background-color: #b1b0b0;
-    z-index: -1;
-    height: 125px;
-    width: 100vw;
+    background-color: #264653;
+    height: 280px;
+    width: 99vw;
     top: 0px;
-    @media only screen and (min-width: 0px) and (max-width: 430px) {
-        height: 175px;
+    z-index: 1;
+    @media only screen and (min-width: 0px) and (max-width: 540px) {
+        height: 360px;
     }
-    @media only screen and (min-width: 430px) and (max-width: 768px) {
-        height: 145px;
-    }
+}
+
+.Wrap {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #264653;
+}
+
+.Box {
+    width: 60vw;
+    margin: 20vw;
 }

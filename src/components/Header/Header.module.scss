@@ -1,7 +1,15 @@
 .Header {
     text-align: center;
+    padding-left: 15px;
+    background-color: #264653;
     &__h1 {
         cursor: pointer;
-        color: #c53a4a;
+        color: #e9c46a;
+        font-size: 70px;
+        margin-bottom: 0px;
+    }
+    &__p {
+        color: white;
+        font-size: 22px;
     }
 }

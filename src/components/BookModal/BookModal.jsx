@@ -17,7 +17,7 @@ const BookModal = () => {
     }, []);
 
     return (
-        <>
+        <div className={style.Modal}>
             {book && (
                 <main>
                     {book.volumeInfo.title && <h1>{book.volumeInfo.title}</h1>}
@@ -63,7 +63,7 @@ const BookModal = () => {
                     </div>
                 </main>
             )}
-        </>
+        </div>
     );
 };
 

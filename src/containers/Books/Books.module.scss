@@ -1,10 +1,21 @@
 .Section {
-    margin: 0px 20%;
-    margin-top: 20px;
+    margin: 0px 20vw;
+    height: 100%;
+    margin-top: 300px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    @media only screen and (min-width: 0px) and (max-width: 900px) {
-        margin: 10px 10%;
+    @media only screen and (min-width: 0px) and (max-width: 540px) {
+        margin-top: 380px;
     }
+    overflow-x: none;
+    overflow-y: none;
+    padding-bottom: 30px;
+}
+
+.Loading {
+    color: #474545;
+    width: 99vw;
+    text-align: center;
+    margin-top: 0px;
 }

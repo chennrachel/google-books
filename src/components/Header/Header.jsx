@@ -10,10 +10,11 @@ const Header = () => {
     return (
         <div className={style.Header}>
             <h1 className={style.Header__h1} onClick={goHome}>
-                Google Books API Search Engine
+                BOOK SEARCH
             </h1>
             <p className={style.Header__p}>
-                Look up information on your favourite books!
+                Using the Google Books API, look up information on your
+                favourite books!
             </p>
         </div>
     );

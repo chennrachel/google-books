@@ -7,21 +7,49 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import BookModal from './components/BookModal/BookModal';
 
 function App() {
-    const [query, setQuery] = useState({ input: '', number: 10, index: '' });
-    const onSearch = (input, number, index) => {
-        setQuery({ input, number, index });
+    const [query, setQuery] = useState({ input: '', number: 10 });
+    const onSearch = (input, number) => {
+        setQuery({ input, number });
     };
 
     return (
         <div className={style.All}>
             <BrowserRouter>
-                <div className={style.Background}></div>
-                <Header />
-                <SearchForm onSearch={onSearch} />
+                {/* <div className={style.Background}></div> */}
                 <Routes>
-                    <Route path='/' element={''} />
-                    <Route path='/books/' element={<Books query={query} />} />
-                    <Route path='/books/:id' element={<BookModal />} />
+                    <Route
+                        path='/'
+                        element={
+                            <div className={style.Wrap}>
+                                <div className={style.Box}>
+                                    <Header />
+                                    <SearchForm onSearch={onSearch} />
+                                </div>
+                            </div>
+                        }
+                    />
+                    <Route
+                        path='/books/'
+                        element={
+                            <>
+                                <div className={style.Background}>
+                                    <Header />
+                                    <SearchForm onSearch={onSearch} />
+                                </div>
+                                <Books query={query} />
+                            </>
+                        }
+                    />
+                    <Route
+                        path='/books/:id'
+                        element={
+                            <>
+                                <Header />
+                                <SearchForm onSearch={onSearch} />
+                                <BookModal />
+                            </>
+                        }
+                    />
                 </Routes>
             </BrowserRouter>
         </div>

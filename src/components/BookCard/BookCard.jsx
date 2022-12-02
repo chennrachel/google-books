@@ -1,5 +1,6 @@
 import style from './BookCard.module.scss';
 import { NavLink } from 'react-router-dom';
+import buttonStyle from '../Button/Button.module.scss';
 
 const BookCard = ({ books }) => {
     return (
@@ -30,7 +31,7 @@ const BookCard = ({ books }) => {
                     {books.volumeInfo.description}{' '}
                 </p>
                 <NavLink to={`/books/${books.id}`}>
-                    <button className={style.Button}>See More</button>
+                    <button className={buttonStyle.Button}>See More</button>
                 </NavLink>
             </span>
         </section>
